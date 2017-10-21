@@ -1,0 +1,4 @@
+Time result carry overflow zero
+70 ns  0x00000000  0  0  1
+100 ns  0x41db47c5  0  1  0
+130 ns  0xfeeffeef  0  0  0

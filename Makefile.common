@@ -1,0 +1,48 @@
+################################################################
+## This file is included by each Makefile in the subdirectories
+## Author: Bin Lin
+## Affiliation: SVL Lab, Portland State University
+## Date: 07/31/2016
+################################################################
+
+
+INC_DIRS = -I. -I$(SYSTEMC_HOME)/include
+
+ARCH ?= $(shell uname -m)
+ifeq ($(ARCH), x86_64)
+LIB_DIRS = $(SYSTEMC_HOME)/lib-linux64
+else
+LIB_DIRS = $(SYSTEMC_HOME)/lib-linux
+endif
+
+LIBS = -lsystemc -lgcov
+CFLAGS = -coverage #-DWAVE_DUMP
+DEBUG = -g -DDEBUG
+CXX = g++
+LINKER = $(CXX)
+
+H_FILES = $(wildcard *.h)
+SRCS = $(wildcard *.cpp)
+
+OBJS = $(notdir $(addsuffix .o,$(basename $(SRCS))))
+
+$(TARGET) : $(OBJS)
+	$(LINKER) -o "$@" -L$(LIB_DIRS) $(OBJS) $(LIBS)
+
+debug: $(OBJS)
+	$(LINKER) $(DEBUG) -o $(TARGET) -L$(LIB_DIRS) $(OBJS) $(LIBS)
+
+.PHONY: check
+check:
+	./$(TARGET)
+
+.PHONY: lcov
+lcov:
+	lcov --directory --no-external -t "test" -o coverage.info -c -d ./
+	genhtml -o html coverage.info
+	firefox ./html/index.html
+
+.PHONY: clean
+clean:
+	@-rm -rf *.gcda *.gcno html coverage.info \
+     $(TARGET) $(OBJS) *_diff.txt *_output.txt *.vcd

@@ -1,0 +1,4 @@
+Time   result
+70 ns 0x00000000
+100 ns 0x642e15aa
+130 ns 0x00ff00ff

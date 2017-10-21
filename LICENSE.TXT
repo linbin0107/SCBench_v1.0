@@ -1,0 +1,16 @@
+*******************************************************************************
+*******************************************************************************
+                   Copyright Notice and  Disclaimer
+*******************************************************************************
+*******************************************************************************
+
+
+Copyright Notice
+Each design in the SCBench benchmark suite is owned by the copyright holder of
+the design. You must follow the copyright of each benchmark design.
+
+
+NO WARRANTY
+There is no warranty for the designs and documents included in this folder.
+The entire risk as to the quality and performance of the designs, fitness to
+a particular purpose is with you.

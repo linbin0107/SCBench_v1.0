@@ -1,0 +1,4 @@
+
+#define MEM_SIZE 400
+#define BOOT_LENGTH 6
+#define MAX_CODE_LENGTH 164

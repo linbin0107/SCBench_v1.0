@@ -1,0 +1,12 @@
+1300 ms pressure at right front wheel: -1
+1300 ms pressure at left front wheel: -1
+1300 ms pressure at right rear wheel: -1
+1300 ms pressure at left rear wheel: -1
+1400 ms pressure at right front wheel: 0
+1400 ms pressure at left front wheel: 0
+1400 ms pressure at right rear wheel: 0
+1400 ms pressure at left rear wheel: 0
+1500 ms pressure at right front wheel: 1
+1500 ms pressure at left front wheel: 1
+1500 ms pressure at right rear wheel: 1
+1500 ms pressure at left rear wheel: 1
