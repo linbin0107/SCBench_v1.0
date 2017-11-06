@@ -91,7 +91,6 @@ static const unsigned char PADDING[64] = {
 /* MD5 initialization. Begins an MD5 operation, writing a new context. */
 void md5c::MD5Init()
 {
-  //cerr << "md5c::MD5Init()" << endl;
   //LCOV_EXCL_BR_START
   o_busy.write( 1 );
   o_start.write( 0 );
